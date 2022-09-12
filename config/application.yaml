@@ -1,0 +1,11 @@
+server:
+  port: 8081
+datasource:
+  driverName: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: api
+  username: pan
+  password: pan@2020
+  charset: utf8
+  loc: Asia/Shanghai
