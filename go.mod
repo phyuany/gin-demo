@@ -13,5 +13,5 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.6.3
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
-	golang.org/x/sys v0.0.0-20200413165638-669c56c373c4 // indirect
+	golang.org/x/sys v0.0.0-20220909162455-aba9fc2a8ff2 // indirect
 )
