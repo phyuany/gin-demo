@@ -18,5 +18,9 @@ type Post struct {
 }
 
 func (post *Post) BeforeCreate(scope *gorm.Scope) error {
-	return scope.SetColumn("ID", uuid.NewV4())
+	uid, err := uuid.NewV4()
+	if err != nil {
+		return err
+	}
+	return scope.SetColumn("ID", uid)
 }

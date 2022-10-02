@@ -44,7 +44,6 @@ func (p PostController) Create(ctx *gin.Context) {
 	// 插入数据
 	if err := p.DB.Create(&post).Error; err != nil {
 		panic(err)
-		return
 	}
 
 	// 成功
