@@ -129,8 +129,5 @@ func Info(ctx *gin.Context) {
 func isTelephoneExists(db *gorm.DB, telephone string) bool {
 	var user model.User
 	db.Where("telephone = ?", telephone).First(&user)
-	if user.ID != 0 {
-		return true
-	}
-	return false
+	return user.ID != 0
 }
