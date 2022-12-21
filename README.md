@@ -24,6 +24,24 @@ cd  backend
 go get
 ```
 
+如果没有mysql数据库，可以使用docker启动一个mysql数据库，项目中提供脚本快速启动，脚本在`db`目录下，相关操作如下
+
+```bash
+# 进入db目录
+cd db
+# 启动mysql数据库
+./startup.sh
+# 销毁数据库
+./shutdown.sh
+```
+
+启动数据库后，在浏览器中访问`http://localhost:8080`，进入数据库管理页面。默认两个账号如下
+
+| 账号       | 密码       | 级别    |
+|----------|----------|-------|
+| root     | root     | 超级管理员 |
+| gin_demo | gin_demo | 普通用户  |
+
 打开 `config/application.yaml` 文件，修改数据库链接配置，修改项目运行端口，确保端口不被占用，参考如下
 
 ```yaml
@@ -33,10 +51,10 @@ datasource:
   driverName: mysql
   host: 127.0.0.1
   port: 3306
-  database: api
-  username: pan
-  password: www.phy.xyz
-  charset: utf8
+  database: gin_demo
+  username: gin_demo
+  password: gin_demo
+  charset: utf8mb4
   loc: Asia/Shanghai
 ```
 

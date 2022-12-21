@@ -4,8 +4,8 @@ datasource:
   driverName: mysql
   host: 127.0.0.1
   port: 3306
-  database: api
-  username: pan
-  password: pan@2020
-  charset: utf8
+  database: gin_demo
+  username: gin_demo
+  password: gin_demo
+  charset: utf8mb4
   loc: Asia/Shanghai
